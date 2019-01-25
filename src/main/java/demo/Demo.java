@@ -17,12 +17,13 @@ public class Demo {
         snmpModel.setPort(161);
         snmpModel.setVersion(1);
         try {
-            System.out.println(snmpService.isEthernetConnection(snmpModel));
+            //是否连接
+            System.out.println("是否连接："+snmpService.isEthernetConnection(snmpModel));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(snmpService.getCpuUtilization(snmpModel));
-        System.out.println(snmpService.getMemoryUtilization(snmpModel));
+        System.out.println("cpu利用率："+ snmpService.getCpuUtilization(snmpModel));
+        System.out.println("内存使用率："+ snmpService.getMemoryUtilization(snmpModel));
 
     }
 }
